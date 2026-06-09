@@ -1,0 +1,6 @@
+{
+  "name": "Chico do Rastro",
+  "description": "Uma plataforma educacional de cidadania voltada para adolescentes, unindo raízes nordestinas e tecnologia moderna.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

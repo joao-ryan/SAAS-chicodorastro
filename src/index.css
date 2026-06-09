@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-bg: #121214; 
+  --color-brand-black: #0A0A0B;
+  --color-brand-cream: #F3E9D2;
+  --color-brand-gold: #D4A373;
+  --color-brand-brown: #8B5E34;
+  --color-brand-blue: #2D6CDF;
+  --color-brand-purple: #8257E5;
+  --color-brand-neutral: #2A2A2D;
+
+  --color-chico-escuro: #101014;
+  --color-chico-preto: #050505;
+  --color-chico-creme: #F5EAE0;
+  --color-chico-dourado: #D8A461;
+  --color-chico-marrom: #A46F46;
+  --color-chico-azul: #3B71CA;
+  --color-chico-roxo: #916AED;
+
+  --font-sans: "Montserrat", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-alt: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+}
+
+@utility bg-gradient-chico {
+  background-image: linear-gradient(135deg, var(--color-chico-dourado) 0%, var(--color-chico-creme) 100%);
+}
+
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-cream);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-brand-gold);
+  color: var(--color-brand-black);
+}
+
+/* Custom smooth interactions, keeping standard cursor visible as requested */
+
+/* Base custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-neutral);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-gold);
+}
