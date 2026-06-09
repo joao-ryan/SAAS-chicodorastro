@@ -22,7 +22,7 @@ export function Layout() {
       
       <main className="flex-1 h-full overflow-y-auto overflow-x-hidden relative scroll-smooth flex flex-col custom-scrollbar">
         {/* Top Fade overlay and Search */}
-        <div className="fixed top-0 left-0 lg:left-72 right-0 h-32 bg-gradient-to-b from-chico-escuro via-chico-escuro/90 to-transparent z-40 pointer-events-none flex items-start justify-center pt-6 px-4 lg:px-16 lg:justify-start">
+        <div className="fixed top-0 left-0 lg:left-72 right-0 h-32 bg-gradient-to-b from-chico-escuro via-chico-escuro/90 to-transparent z-40 pointer-events-none flex items-start justify-center pt-6 pl-4 pr-16 lg:px-16 lg:justify-start">
            <div className="w-full max-w-xl bg-black/40 border border-white/10 rounded-2xl backdrop-blur-xl flex items-center px-4 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)] pointer-events-auto group focus-within:border-chico-dourado/50 focus-within:shadow-[0_0_20px_rgba(212,163,115,0.2)] transition-all">
              <Search size={18} className="text-slate-400 group-focus-within:text-chico-dourado transition-colors" />
              <input 
