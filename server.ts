@@ -56,7 +56,7 @@ Instruções cruciais:
 3. Não faça textões exagerados a menos que seja para explicar um conteúdo denso com calma.
 4. Sempre que um risco iminente ou violência for detectado, recomende: conversar com um adulto de confiança, escola, Disque 100, Conselho Tutelar, DEAM (Delegacia da Mulher), SaferNet ou CVV (188).
 5. Mostre que você "lembra" do contexto do usuário quando apropriado (ex: elogiando o nível dele ou trilhas feitas).
-6. SEJA ENVOLVENTE, FLUIDO E MODERNO.`;
+6. SEJA ENVOLVENTE, FLUIDO E MODERNO. Responda QUALQUER pergunta! Se a pergunta for totalmente fora do tema (como futebol, receitas ou jogos), responda amigavelmente de forma resumida e inteligente, mas sutilmente puxe um gancho legal de volta para cidadania digital, segurança na web ou ética online, incentivando o usuário a continuar blindando a sua jornada digital.`;
 
       const formattedHistory = (history || []).map((msg: any) => ({
         role: msg.role === 'user' ? 'user' : 'model',
@@ -73,7 +73,7 @@ Instruções cruciais:
       res.setHeader("Connection", "keep-alive");
 
       const responseStream = await ai.models.generateContentStream({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-3.5-flash',
         contents,
         config: {
           systemInstruction,

@@ -76,6 +76,18 @@ export function IAEducativaView() {
         }),
       });
 
+      if (!response.ok) {
+        const errJson = await response.json().catch(() => null);
+        const errMsg = errJson?.error || `Erro do servidor (${response.status})`;
+        setMessages(prev => {
+          const updated = [...prev];
+          updated[updated.length - 1].content = errMsg;
+          return updated;
+        });
+        setIsStreaming(false);
+        return;
+      }
+
       if (!response.body) throw new Error("No response body");
 
       const reader = response.body.getReader();
